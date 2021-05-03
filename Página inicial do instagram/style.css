@@ -10,7 +10,10 @@
 body {
     background: rgb(245, 245, 250);
     display: flex;
-    justify-content: center;   
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; 
 }
 
 .instagram-wrapper{
@@ -19,6 +22,10 @@ body {
     justify-content: start;
     width: 60%;
     height: 100vh;
+}
+
+.instagram-continue {
+    width: 100%;    
 }
 
 .instagram-phone {
@@ -57,7 +64,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding: 1.3rem 0;
+    padding: 1rem 0;
 }
 
 .grupo:nth-child(1){
@@ -67,6 +74,7 @@ body {
 .grupo:nth-child(2){
     color:#a0a0a0;
 }
+
 
 .continuar {
     display: flex;
@@ -91,15 +99,35 @@ body {
     color:#0095f6;
 }
 
-.aplicativos {
+.link-app {
+    align-items: center;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;   
+
 }
 
-.texto-baixar {
-    padding: 10px;
+.paragrafo-baixar {
+    font-size: 14px;
+    padding-top: 15px;
+    
 }
 
-/* media qurires*/
+.link-app img{    
+    width: 10rem;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.link-baixar {
+    display: flex;
+}
+/* media queries*/
+
 
 @media (max-width: 1024px) {
     .instagram-wrapper {
@@ -110,9 +138,18 @@ body {
 @media (max-width: 650px) {
     .instagram-wrapper {
         width: 90%;
+        background-color: #ffffff;
+        justify-content: center;
     }
+    .grupo {
+        border: none;
+    }    
 
     .instagram-phone {
         display: none;
     }
+    .link-app img {
+        padding: 15px 0;
+    }
 }
+
